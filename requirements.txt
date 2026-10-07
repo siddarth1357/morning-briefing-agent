@@ -1,0 +1,8 @@
+feedparser
+python-dotenv
+schedule
+beautifulsoup4
+scikit-learn
+numpy
+openai
+

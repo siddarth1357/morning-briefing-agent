@@ -1,0 +1,19 @@
+# Secrets
+.env
+
+# Python
+venv/
+__pycache__/
+*.pyc
+*.pyo
+
+# Database
+memory/briefing_memory.db
+
+# Logs & output
+*.log
+run_output.txt
+
+# OS junk
+.DS_Store
+Thumbs.db
