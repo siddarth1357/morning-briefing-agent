@@ -48,6 +48,12 @@ jobs:
           if [ -f run_output.txt ]; then
             cat run_output.txt
           fi
+          # run_once.py swallows exceptions (always exits 0), so detect
+          # failures from the captured log to keep the run status honest.
+          if [ -f run_output.txt ] && grep -q "Traceback (most recent call last)" run_output.txt; then
+            echo "::error::Briefing pipeline raised an exception - see log above."
+            exit 1
+          fi
 
       - name: Upload memory database
         if: always()
